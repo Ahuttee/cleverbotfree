@@ -114,7 +114,6 @@ class Cleverbot:
         while len(line) <= 1 and line != self.bot_response:
             line = self.page.text_content(self.reply)
             sleep(0.1)
-        self.page.close()
         return self.bot_response
 
     def single_exchange(self, user_input: str) -> str:
